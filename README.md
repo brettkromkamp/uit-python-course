@@ -1,6 +1,6 @@
 # Introductory Python Course - UiT
 
-Welcome to this introductory programming course. We will use the programming language [Python](https://www.python.org/).
+Welcome to this introductory programming course based on the [Python](https://www.python.org/) programming language.
 
 ## Recommended Python Learning Path
 
@@ -9,7 +9,7 @@ Welcome to this introductory programming course. We will use the programming lan
 - Conditions
 - Chained Conditionals
 - Operators
-- Control Flow (If/Else)
+- Control Flow
 - Loops and Iterables
 - Basic Data Structures
 - Functions
