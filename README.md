@@ -160,3 +160,54 @@ set([0, 1, 4])
 >>> {s**2 for s in range(10)}
 set([0, 1, 4, 9, 16, 25, 36, 49, 64, 81])
 ```
+
+## Truthy and Falsy in Python
+
+### Falsy Values
+
+#### Sequences and Collections
+- Empty lists []
+- Empty tuples ()
+- Empty dictionaries {}
+- Empty sets set()
+- Empty strings ""
+- Empty ranges range(0)
+
+#### Numbers
+- Zero of any numeric type
+- Integer: 0
+- Float: 0.0
+- Complex: 0j
+
+#### Constants
+- None
+- False
+
+### Truthy Values
+
+By default, an object is considered true.
+
+#### Truthy Values
+- Non-empty sequences or collections (lists, tuples, strings, dictionaries, sets).
+- Numeric values that are not zero.
+- True
+
+## Resources
+- [Structural pattern matching in Python 3.10](https://benhoyt.com/writings/python-pattern-matching/)
+- [Time complexity in CPython](https://wiki.python.org/moin/TimeComplexity)
+- [Pass by reference in Python](https://realpython.com/python-pass-by-reference/)
+- [Vatiables in Python](https://realpython.com/python-variables/)
+- [Variables and scope - Global, nonlocal and local](https://medium.com/swlh/variables-and-scopes-in-python-global-nonlocal-and-local-923a71cb57d4)
+- [Truthy and Falsy in Python](https://www.freecodecamp.org/news/truthy-and-falsy-values-in-python/)
+- [What every programmer needs to know about encodings](https://kunststube.net/encoding/)
+- [How Python does Unicode](https://www.b-list.org/weblog/2017/sep/05/how-python-does-unicode/)
+- [Dictionary comprehension tutorial](https://www.datacamp.com/community/tutorials/python-dictionary-comprehension)
+- [How to use Python lambda functions](https://realpython.com/python-lambda/)
+- [Destructuring in Python](https://blog.teclado.com/destructuring-in-python/)
+- [Listening to sorting algorithms](https://www.youtube.com/watch?v=GIvjJwzrHBU)
+- [Tkinter 8.5 reference](https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/index.html)
+- [Iterators and generators](https://anandology.com/python-practice-book/iterators.html)
+- [Four types of comprehensions](https://towardsdatascience.com/4-types-of-comprehensions-in-python-2fbeafdf2fda)
+- [When to use a list comprehension](https://realpython.com/list-comprehension-python/)
+- [Context managers and Python's ```with``` statement](https://realpython.com/python-with-statement/)
+- [Primer on Python decorators](https://realpython.com/primer-on-python-decorators/)
