@@ -2,7 +2,7 @@
 
 Welcome to this introductory programming course. We will use the programming language [Python](https://www.python.org/).
 
-## Areas of Competence
+## Recommended Python Learning Path
 
 ### Basic Topics
 - Variables
@@ -211,3 +211,4 @@ By default, an object is considered true.
 - [When to use a list comprehension](https://realpython.com/list-comprehension-python/)
 - [Context managers and Python's ```with``` statement](https://realpython.com/python-with-statement/)
 - [Primer on Python decorators](https://realpython.com/primer-on-python-decorators/)
+- [Introduction to Python generators](https://realpython.com/introduction-to-python-generators/)
