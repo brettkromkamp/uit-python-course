@@ -196,7 +196,7 @@ By default, an object is considered true.
 - [Structural pattern matching in Python 3.10](https://benhoyt.com/writings/python-pattern-matching/)
 - [Time complexity in CPython](https://wiki.python.org/moin/TimeComplexity)
 - [Pass by reference in Python](https://realpython.com/python-pass-by-reference/)
-- [Vatiables in Python](https://realpython.com/python-variables/)
+- [Variables in Python](https://realpython.com/python-variables/)
 - [Variables and scope - Global, nonlocal and local](https://medium.com/swlh/variables-and-scopes-in-python-global-nonlocal-and-local-923a71cb57d4)
 - [Truthy and Falsy in Python](https://www.freecodecamp.org/news/truthy-and-falsy-values-in-python/)
 - [What every programmer needs to know about encodings](https://kunststube.net/encoding/)
