@@ -1,8 +1,21 @@
 # Introductory Python Course 2021 - UiT
 # By Brett Alistair Kromkamp (brettkromkamp@gmail.com - https://brettkromkamp.com)
 #
-# A more up-to-date Python tree implementation is available,
+# An alternative and slightly more advanced Python tree implementation is available,
 # here: https://github.com/brettkromkamp/typed-tree
+#
+# Example tree:
+# Harry
+#          Jane
+#                  Joe
+#                  Diane
+#                          George
+#                                  Jill
+#                                          Carol
+#                          Mary
+#                  Mark
+#          Bill
+#                  Grace
 
 from enum import Enum
 
