@@ -166,22 +166,22 @@ set([0, 1, 4, 9, 16, 25, 36, 49, 64, 81])
 ### Falsy Values
 
 #### Sequences and Collections
-- Empty lists []
-- Empty tuples ()
-- Empty dictionaries {}
-- Empty sets set()
-- Empty strings ""
-- Empty ranges range(0)
+- Empty lists ```[]```
+- Empty tuples ```()```
+- Empty dictionaries ```{}```
+- Empty sets ```set()```
+- Empty strings ```""```
+- Empty ranges ```range(0)```
 
 #### Numbers
 - Zero of any numeric type
-- Integer: 0
-- Float: 0.0
-- Complex: 0j
+- Integer: ```0```
+- Float: ```0.0```
+- Complex: ```0j```
 
 #### Constants
-- None
-- False
+- ```None```
+- ```False```
 
 ### Truthy Values
 
@@ -190,7 +190,7 @@ By default, an object is considered true.
 #### Truthy Values
 - Non-empty sequences or collections (lists, tuples, strings, dictionaries, sets).
 - Numeric values that are not zero.
-- True
+- ```True```
 
 ## Resources
 - [Structural pattern matching in Python 3.10](https://benhoyt.com/writings/python-pattern-matching/)
