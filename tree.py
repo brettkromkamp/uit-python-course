@@ -15,8 +15,9 @@ class TraversalMode(Enum):
 
 # --------------------------------------------------------------------------------
 class Node:
-    def __init__(self, identifier):
+    def __init__(self, identifier, name):
         self.identifier = identifier
+        self.name = name
         self.children = []
 
     def add_child(self, identifier):
@@ -28,8 +29,8 @@ class Tree:
     def __init__(self):
         self.nodes = {}
 
-    def add_node(self, identifier, parent=None):
-        node = Node(identifier)
+    def add_node(self, identifier, parent=None, name="Undefined"):
+        node = Node(identifier, name)
         self[identifier] = node
 
         if parent is not None:
@@ -38,21 +39,22 @@ class Tree:
         return node
 
     def display(self, identifier, depth=0):
-        children = self[identifier].children
+        node = self[identifier]
+        children = node.children
         if depth == 0:
-            print(f"{identifier}")
+            print(f"{node.name}")
         else:
-            print("\t" * depth, f"{identifier}")
+            print("\t" * depth, f"{node.name}")
 
         depth += 1
         for child in children:
             self.display(child, depth)  # Recursive call
 
     def traverse(self, identifier, mode=TraversalMode.DEPTH):
-        yield identifier
+        yield self[identifier]
         queue = self[identifier].children
         while queue:
-            yield queue[0]
+            yield self[queue[0]]
             expansion = self[queue[0]].children
             if mode == TraversalMode.DEPTH:
                 queue = expansion + queue[1:]  # Depth-first traversal
@@ -73,24 +75,24 @@ class Tree:
 if __name__ == "__main__":
     tree = Tree()
 
-    tree.add_node("harry")  # root node
-    tree.add_node("jane", "harry")
-    tree.add_node("bill", "harry")
-    tree.add_node("joe", "jane")
-    tree.add_node("diane", "jane")
-    tree.add_node("george", "diane")
-    tree.add_node("mary", "diane")
-    tree.add_node("jill", "george")
-    tree.add_node("carol", "jill")
-    tree.add_node("grace", "bill")
-    tree.add_node("mark", "jane")
+    tree.add_node("harry", name="Harry")  # Root node
+    tree.add_node("jane", parent="harry", name="Jane")
+    tree.add_node("bill", parent="harry", name="Bill")
+    tree.add_node("joe", parent="jane", name="Joe")
+    tree.add_node("diane", parent="jane", name="Diane")
+    tree.add_node("george", parent="diane", name="George")
+    tree.add_node("mary", parent="diane", name="Mary")
+    tree.add_node("jill", parent="george", name="Jill")
+    tree.add_node("carol", parent="jill", name="Carol")
+    tree.add_node("grace", parent="bill", name="Grace")
+    tree.add_node("mark", parent="jane", name="Mark")
 
     tree.display("harry")
     print("***** DEPTH-FIRST ITERATION *****")
     for node in tree.traverse("harry"):
-        print(node)
+        print(node.name)
     print("***** BREADTH-FIRST ITERATION *****")
     for node in tree.traverse("harry", mode=TraversalMode.BREADTH):
-        print(node)
+        print(node.name)
     print("***** EMULATING CONTAINER TYPES *****")
-    print(tree["harry"].identifier)
+    print(tree["harry"].name)
