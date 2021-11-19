@@ -33,7 +33,7 @@ class Tree:
         node = Node(identifier, name)
         self[identifier] = node
 
-        if parent is not None:
+        if parent:
             self[parent].add_child(identifier)
 
         return node
@@ -41,10 +41,10 @@ class Tree:
     def display(self, identifier, depth=0):
         node = self[identifier]
         children = node.children
-        if depth == 0:
-            print(f"{node.name}")
-        else:
+        if depth:
             print("\t" * depth, f"{node.name}")
+        else:
+            print(f"{node.name}")
 
         depth += 1
         for child in children:
