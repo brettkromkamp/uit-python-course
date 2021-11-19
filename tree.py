@@ -72,7 +72,7 @@ class Tree:
             if mode == TraversalMode.DEPTH:
                 queue = expansion + queue[1:]  # Depth-first traversal
             elif mode == TraversalMode.BREADTH:
-                queue = queue[1:] + expansion  # Width-first traversal
+                queue = queue[1:] + expansion  # Breadth-first traversal
 
     # https://docs.python.org/3/reference/datamodel.html#emulating-container-types
     def __getitem__(self, key):
@@ -100,6 +100,7 @@ if __name__ == "__main__":
     tree.add_node("grace", parent="bill", name="Grace")
     tree.add_node("mark", parent="jane", name="Mark")
 
+    print("***** DISPLAY TREE *****")
     tree.display("harry")
     print("***** DEPTH-FIRST ITERATION *****")
     for node in tree.traverse("harry"):
